@@ -218,6 +218,25 @@ section .dingdan .div2
 	right: 40px;
 	
 }
+section .dingdan .div2 .a
+{
+	width: 300px;
+}
+section .dingdan .div2 .a input
+{
+	float: left;
+	margin-right: 50px;
+}
+section .dingdan .div2 .a p
+{	
+	width: 60px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+	color: #000000;
+	float: left;
+}
 section .dingdan .div2 input
 {
 	width: 100px;
@@ -230,7 +249,7 @@ section .dingdan .div2 input
 }
 section .dingdan .div2 .aps
 {
-	width: 400px;
+	width: 300px;
 	height: 45px;
 	position: relative;
 }
@@ -247,7 +266,7 @@ section .dingdan .div2 .aps span
 }
 section .dingdan .div2 .aps .star
 {
-	width: 300px;
+	width: 200px;
 	height: 45px;
 	position: absolute;
 	right: 0;

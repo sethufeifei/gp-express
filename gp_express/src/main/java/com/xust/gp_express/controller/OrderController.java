@@ -135,9 +135,12 @@ public class OrderController {
 
     //根据订单id评价
     @RequestMapping("/evaluate")
-    public Result evaluate(Integer orderId,Integer evaluate,Integer id ){
+    public Result evaluate(Integer orderId,Integer evaluate){
 
         log.info("根据订单id评价！");
+
+        System.out.println(orderId);
+        System.out.println(evaluate);
 
         if(orderId == null){
             return ReturnHandle.returnData(3,"订单号不能为空！");
@@ -151,9 +154,6 @@ public class OrderController {
             return ReturnHandle.returnData(6,"评价参数有误，评价参数应为0-5！");
         }
 
-
-        Optional<Users> optional = usersRepository.findById(id);
-        if(optional.isPresent() && optional.get().getFlag() == 1){
             Optional<Orders> optionalOrder = orderRepository.findById(orderId);
             if (optionalOrder.isPresent()){
                 Orders orders = optionalOrder.get();
@@ -161,9 +161,6 @@ public class OrderController {
                 return ReturnHandle.returnData(1,"确认收货成功！");
             }
             return ReturnHandle.returnData(4,"此订单不存在！");
-        }
-
-        return ReturnHandle.returnData(2,"您不是普通用户！");
     }
 
 }

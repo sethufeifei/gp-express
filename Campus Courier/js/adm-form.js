@@ -19,14 +19,31 @@ $("#home").mousedown(function (){
 var str1 = "";
 $(document).ready(function (){
 	$.ajax({
-		type:"post",
+		type:"get",
 		url:"http://180.76.244.76:8000/findOrderAllList",
 		async:true,
 		data:{},
 		success:function (data1){
 			for(var i=0;i<data1.data.length;i++){
 			//动态创建订单
-			str1 += "<li><div class='div1'><p id='id'>"+data1.data[i].name+"</p ><p id='ads'>"+data1.data[i].place+"</p ><p id='tim'>"+data1.data[i].createDate+"</p ></div><div class='div2'><input id='goods' type='button' value='已收货' /><div class='aps'><span>评价：</span><div class='star'><img src='img/评价(4).png'/><img src='img/评价(4).png'/><img src='img/评价(4).png'/><img src='img/评价(4).png'/><img src='img/评价(4).png'/></div></div></div></li>";
+			str1 += "<li><div class='div1'><p id='id'>"+data1.data[i].name+"</p><p id='ads'>"+data1.data[i].place+"</p><p id='tim'>"+data1.data[i].createDate+"</p></div><div class='div2'><input id='goods' type='button' value='"+data1.data[i].bool+"'/><div class='aps'><span>评价：</span><div class='star clearfix'><p>"+data1.data[i].evaluate+"</p><p>星</p></div></div></div></li>";
+			}
+			$(".dingdan").html(str1);
+		}
+	});
+})
+
+var str1 = "";
+$(document).ready(function (){
+	$.ajax({
+		type:"get",
+		url:"http://180.76.244.76:8000/findOrderAllList",
+		async:true,
+		data:{},
+		success:function (data1){
+			for(var i=0;i<data1.data.length;i++){
+			//动态创建订单
+			str1 += "<li><div class='div1'><p id='id'>"+data1.data[i].id+"</p><p id='ads'>"+data1.data[i].palce+"</p><p id='tim'>"+data1.data[i].createDate+"</p></div><div class='div2'><input id='goods' type='button' value='"+data1.data[i].bool+"' /><div class='aps'><span>评价：</span><div class='star clearfix'><p>"+data1.list[i].evaluate+"</p><p>星</p></div></div></div></li>";
 			}
 			$(".dingdan").html(str1);
 		}
