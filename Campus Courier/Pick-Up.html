@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>pick-up</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/pick-up.css" />
+		
+	</head>
+	<body>
+		<header>
+			<div class="top">
+				<img id="logo" src="img/logo2.png" />
+				<div class="account clearfix">
+					<img src="img/my.png" />
+					<p id="phnum"></p>
+					<input type="button" id="cancel" value="退出" />
+				</div>
+			</div>
+			<div class="nav">
+				<ul class="nav-ul clearfix">
+					<li id="home"><a href="#">首页</a></li>
+					<li id="send"><a href="#">在线寄件</a></li>
+					<li id="pick"><a href="#">在线取件</a></li>
+					<li id="job"><a href="#">学生兼职</a></li>
+					<li id="my"><a href="#">我的</a></li>
+				</ul>
+		</div>
+		</header>
+		
+		<section>
+			<div class="head clearfix">
+				<img src="img/jiqu.png" />
+				<p><strong>在线取件</strong><span>（17点前下单，17点后下单次日收件）</span></p>
+			</div>
+			<div class="content1">
+				<p class="tit">价格表：</p>
+				<div class="p">
+					<p>规则物品：长(cm)*宽(cm)*高(cm)/6000=重量(KG)</p>
+					<p>不规则物品：最长(cm)*最宽(cm)*最高(cm)/6000=重量(KG)</p>
+				</div>
+				<div class="bom">
+					<div class="tab">
+						<table bordercolor="#bac9ea" border="1" cellspacing="0" align="center">
+							<tr>
+								<td>体积重量/kg</td>
+								<td>价格/元</td>
+							</tr>
+							<tr>
+								<td>0-1.5</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>1.5-4</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>4-..</td>
+								<td>4</td>
+							</tr>
+						</table>
+					</div>
+					<div class="sum">
+						<form id="test">
+							<label><input type="checkbox" name="r" id="price1"/>0-1.5</label>
+   							<input type="checkbox" name="r" id="price2"/>1.5-4
+    						<input type="checkbox" name="r" id="price3"/>4-..
+						</form>
+						<div class="count">
+							<label>件数：</label>
+							<input type="text" value="" id="cnt123" />
+							<span>件</span>
+						</div>
+						<div class="SumPrice">
+							<label>总价：</label>
+							<input type="text" value="" id="Price123"/>
+							<span>元</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content2">
+				<ul class="clearfix">
+					<li id="ji"><a href="#">取件</a></li>
+					<!--<li id="qu"><a href="#">取件</a></li>-->
+				</ul>
+				<div class="meg clearfix">
+					<div class="l-text">
+						<div class="l-text1">
+							<label for="name">姓名：</label><input type="text" id="name" />
+						</div>
+						<div class="l-text2">
+							<label for="maj">专业班级：</label><input type="text" id="maj" />
+						</div>
+						<div class="l-text3">
+							<label for="ph123">电话：</label><input type="text" id="ph123" />
+						</div>
+						<div class="l-text4">
+							<label for="num">取件数：</label><input type="text" id="num" />
+						</div>
+					</div>
+					<div class="r-text">
+						<div class="r-text1">
+							<label for="pie">预计价格：</label><input type="text" id="pie" />
+						</div>
+						<div class="r-text2">
+							<label for="message">取件信息：</label><input type="text" id="message" />
+						</div>
+						<div class="r-text3">
+							<label for="time">预计时间：</label><input type="text" id="time" />
+						</div>
+						<div class="r-text4">
+							<label for="adress">预计地点：</label><input type="text" id="adress" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="end">
+				<input type="button" id="j-sub" value="提交" />
+			</div>
+		</section>
+		
+		
+		<footer>
+			<div class="footer">
+				<div class="weixin">
+					<p>微信服务</p>
+					<img src="img/weixin.png"  />
+				</div>
+				<div class="server">
+					<p>服务指南  | 隐私保护  | 法律声明  | 安全响应中心  | 快递协会</p>
+					<p>邮政编码：710600</p>
+					<p>客服热线：18392685747</p>
+				</div>
+			</div>
+		</footer>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/pick-up.js"></script>
+	</body>
+</html>

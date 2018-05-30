@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>my-Pwd</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/my-pwd.css" />
+
+<style>
+
+</style>
+	</head>
+	<body>
+		<header>
+			<div class="top">
+				<img id="logo" src="img/logo2.png" />
+				<div class="account clearfix">
+					<img src="img/my.png" />
+					<p id="ph"></p>
+					<input type="button" id="cancel" value="退出" />
+				</div>
+			</div>
+			<div class="nav">
+				<ul class="nav-ul clearfix">
+					<li id="home"><a href="#">首页</a></li>
+					<li id="send"><a href="#">在线寄件</a></li>
+					<li id="pick"><a href="#">在线取件</a></li>
+					<li id="job"><a href="#">学生兼职</a></li>
+					<li id="my"><a href="#">我的</a></li>
+				</ul>
+		</div>
+		</header>
+		
+		<section>
+			<div class="box clearfix">
+				<div class="left">
+					<ul>
+						<li id="myword">
+							<img src="img/cir1.png" />
+							<a href="#">修改密码</a>
+						</li>
+						<li id="myform">
+							<img src="img/cir2.png" />
+							<a href="#">我的订单</a>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="head">
+						<p>修改密码</p>
+					</div>
+					<div class="content">
+						<form>
+							<div class="old">
+								<label for="OldWord">旧密码：</label><input type="text" id="OldWord" />
+							</div>
+							<div class="new">
+								<label for="NewWord">新密码：</label><input type="text" id="NewWord" />
+							</div>
+							<div class="afm">
+								<label for="AfmWord">确认密码：</label><input type="text" id="AfmWord" />
+							</div>
+						</form>
+						<input type="button" id="rew" value="设置密码"/>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<div class="footer">
+				<div class="weixin">
+					<p>微信服务</p>
+					<img src="img/weixin.png"  />
+				</div>
+				<div class="server">
+					<p>服务指南  | 隐私保护  | 法律声明  | 安全响应中心  | 快递协会</p>
+					<p>邮政编码：710600</p>
+					<p>客服热线：18392685747</p>
+				</div>
+			</div>
+		</footer>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/my-pwd.js"></script>
+	</body>
+</html>

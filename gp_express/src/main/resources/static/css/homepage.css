@@ -1,0 +1,270 @@
+header .top
+{
+	width: 1920px;
+	height: 90px;
+	background-color: #FFFFFF;
+	position: relative;
+	left: 50%;
+	margin-left: -960px;
+}
+header .top #logo
+{
+	width: 240px;
+	height: 60px;
+	position: absolute;
+	left: 320px;
+	top: 13px;
+}
+header .account
+{
+	width: 210px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	right: 300px;
+	top: 60px;
+
+}
+header .account img
+{
+	float: left;
+	width: 18px;
+	height: 18px;
+}
+header .account p
+{
+	float: left;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	color: #4c90f4;
+}
+header .account #cancel
+{	
+	border: none;
+	background-color: #FFFFFF;
+	color: #534f4f;
+	font-size: 16px;
+}
+header .nav
+{
+	width: 100%;
+	height: 60px;
+	background-color: #4c90f4;
+	margin: 0 auto;
+}
+header .nav .nav-ul
+{
+	width: 1000px;
+	height: 60px;
+	margin: 0 auto;
+	text-align: center;
+}
+header .nav .nav-ul li
+{
+	width: 200px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 22px;
+	float: left;
+}
+header .nav .nav-ul li:nth-child(1)
+{
+	background-color: #1b77b6;
+}
+header .nav .nav-ul li:hover
+{
+	background-color: #1b77b6;
+}
+header .nav .nav-ul li a
+{
+	color: #FFFFFF;
+}
+
+
+section
+{
+	width: 100%;
+	height: 1200px;
+	margin-top: 20px;
+	background-color: #e4e5ec;
+}
+section .banner
+{
+	width: 1920px;
+	height: 560px;
+	position: relative;
+	left: 50%;
+	margin-left: -960px;
+}
+section .banner img
+{
+	width: 1920px;
+	height: 560px;
+}
+section .banner div{
+	width: 125px;
+	height: 125px;
+	position: absolute;
+	cursor: pointer;
+	line-height: 125px;
+}
+ section .banner div i{
+	width: 125px;
+	height: 125px;
+	text-align: center;
+	font-size: 125px;
+	color: #fff;
+	opacity: 0.3;
+	transition:1s all;
+}
+section .banner div:hover i{
+	opacity: 1;
+}
+section .banner div:nth-of-type(1){
+	left: 600px; 
+	top: 300px;
+}
+section .banner div:nth-of-type(2){
+	right: 600px; 
+	top: 300px;
+}
+section .banner .point{
+	position: absolute;
+	left: 500px;
+	bottom: 110px;
+}
+section .banner .point li{
+	display: inline-block;
+	margin-right: 8px;
+	cursor: pointer;
+	width: 15px; 
+	height: 15px; 
+	border: 1px #fff solid;
+	border-radius: 50%;
+}
+section .banner .point li:hover,.banner .point li.active{
+	background-color: #fff;
+}
+section .content
+{
+	width: 1280px;
+	background-color: #FFFFFF;
+	position: relative;
+	left: 50%;
+	margin-left: -640px;
+}
+section .content .left
+{
+	width: 600px;
+	height: 600px;
+	float: left;
+	padding-top: 60px;
+}
+section .content .left p
+{
+	width: 600px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 30px;
+	color: #000000;
+}
+section .content .left .peitu
+{
+	width: 600px;
+	height: 500px;
+	line-height: 500px;
+	text-align: center;
+}
+section .content .left .peitu img
+{
+	width: 400px;
+	height: 300px;
+}
+section .content .border
+{
+	width: 4px;
+	height: 600px;
+	float: left;
+}
+section .content .border img
+{
+	width: 4px;
+	height: 600px;
+}
+section .content .right
+{	
+	float: left;
+	width: 670px;
+	height: 600px;
+	padding-left: 40px;
+	padding-top: 60px;
+}
+section .content .right p
+{
+	width: 600px;
+	height: 400px;
+	line-height: 60px;
+	text-align: left;
+	text-indent: 2em;
+	font-size: 24px;
+	color: #000000;
+}
+
+
+footer
+{
+	width: 100%;
+	height: 200px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	padding-bottom: 30px;
+}
+footer .footer
+{
+	width: 1920px;
+	height: 200px;
+	margin: 0 auto;
+	position: relative;
+	left: 50%;
+	margin-left: -960px;
+}
+
+footer .footer .weixin
+{
+	width: 152px;
+	height: 200px;
+	position: absolute;
+	top: 20px;
+	left: 380px;
+	
+}
+footer .footer .weixin p
+{
+	width: 152px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 20px;
+	color: #534F4F;
+	margin-bottom: 15px;
+}
+footer .footer .server
+{
+	position: absolute;
+	top: 40px;
+	right: 380px;
+	font-size: 20px;
+	color: #b0acac;
+}
+footer .footer .server p
+{
+	color: #534F4F;
+	margin-bottom: 30px;
+		
+}	

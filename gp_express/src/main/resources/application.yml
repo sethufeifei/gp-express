@@ -1,0 +1,12 @@
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://180.76.244.76:3306/123?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE
+      username: remote
+      password: rMPUyZ2mDIeggT+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8000

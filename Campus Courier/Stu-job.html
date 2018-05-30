@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>stu-jub</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/Stu-job.css" />
+
+	</head>
+	<body>
+		<header>
+			<div class="top">
+				<img id="logo" src="img/logo2.png" />
+				<div class="account clearfix">
+					<img src="img/my.png" />
+					<p id="ph"></p>
+					<input type="button" id="cancel" value="退出" />
+				</div>
+			</div>
+			<div class="nav">
+				<ul class="nav-ul clearfix">
+					<li id="home"><a href="#">首页</a></li>
+					<li id="send"><a href="#">在线寄件</a></li>
+					<li id="pick"><a href="#">在线取件</a></li>
+					<li id="job"><a href="#">学生兼职</a></li>
+					<li id="my"><a href="#">我的</a></li>
+				</ul>
+			</div>
+		</header>
+		
+		<section>
+			<div class="head clearfix">
+				<img src="img/zhaopin.png" />
+				<p><strong>招聘兼职</strong><span>（请填写如下信息）</span></p>
+			</div>
+			<div class="content">
+				<p>信息填写：</p>
+				<div class="mation">
+					<div class="mation1">
+						<label for="Name">姓名：</label><input type="text" id="Name" />
+					</div>
+					<div class="mation2">
+						<label for="dep">学院：</label><input type="text" id="dep" />
+					</div>
+					<div class="mation3">
+						<label for="No">学号：</label><input type="text" id="No" />
+					</div>
+					<div class="mation4">
+						<label for="phm">电话：</label><input type="text" id="Phm" />
+					</div>
+					<div class="mation5">
+						<label for="Maj">专业班级：</label><input type="text" id="Maj" />
+					</div>
+					<div class="mation6">
+						<label for="Time">单双周空课时间：</label><input type="text" id="Time" />
+					</div>
+					<div class="mation7">
+						<label for="season">兼职理由：</label><input type="text" id="season" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="end">
+				<input type="button" id="submit" value="提交" />
+			</div>
+		</section>
+		
+		<footer>
+			<div class="footer">
+				<div class="weixin">
+					<p>微信服务</p>
+					<img src="img/weixin.png"  />
+				</div>
+				<div class="server">
+					<p>服务指南  | 隐私保护  | 法律声明  | 安全响应中心  | 快递协会</p>
+					<p>邮政编码：710600</p>
+					<p>客服热线：18392685747</p>
+				</div>
+			</div>
+		</footer>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/stu-job.js"></script>
+	</body>
+</html>

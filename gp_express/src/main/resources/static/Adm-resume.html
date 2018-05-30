@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>adm-resume</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"  />
+		<link rel="stylesheet" type="text/css" href="css/adm-resume.css" />
+	
+	</head>
+	<body>
+		<header>
+			<div class="top">
+				<img id="logo" src="img/logo2.png" />
+				<div class="account clearfix">
+					<div class="img"><img src="img/my.png" /></div>
+					<p id="ph"></p>
+					<input type="button" id="cancel" value="退出" />
+				</div>
+			</div>
+			<div class="nav">
+				<ul class="nav-ul clearfix">
+					<li id="home"><a href="#">首页</a></li>
+					<li id="send"><a href="#">查看订单</a></li>
+					<li id="job"><a href="#">查看简历</a></li>
+					<!--<li id="my"><a href="#">我的</a></li>-->
+				</ul>
+			</div>
+		</header>
+		
+		<section>
+			<div class="section">
+				<div class="head">
+					<div class="border"></div>
+					<div class="form">简历列表</div>
+				</div>
+				<div class="content">
+					<ul class="resume">
+						<li>
+							<div class="form1">
+								<div class="left">
+									<div><label for="code">编码：</label><input type="text" id="code" /></div>
+									<div><label for="name">姓名：</label><input type="text" id="name" /></div>
+								</div>
+								<div class="right">
+									<div><label for="no">学号：</label><input type="text" id="no" /></div>
+									<div><label for="phm">电话：</label><input type="text" id="phm" /></div>
+								</div>
+							</div>
+							<div class="form2">
+								<div><label for="info">申请理由：</label><input type="text" id="info" /></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<div class="footer">
+				<div class="weixin">
+					<p>微信服务</p>
+					<img src="img/weixin.png"  />
+				</div>
+				<div class="server">
+					<p>服务指南  | 隐私保护  | 法律声明  | 安全响应中心  | 快递协会</p>
+					<p>邮政编码：710600</p>
+					<p>客服热线：18392685747</p>
+				</div>
+			</div>
+		</footer>
+		
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/adm-resume.js"></script>
+	</body>
+</html>
+

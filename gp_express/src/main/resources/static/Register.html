@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Register</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+		<script src="js/vue.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<img class="logo" src="img/logo1.png"/>
+		</header>
+		<section>
+			<form id="vue-form">
+                <div class="userPhone">
+				   <label for="username">用户账户:</label>
+				   <input type="text" name="user" id="userPhoneNumber" placeholder="手机号" v-on:blur="phone"/>
+				   <p class="phone">请输入正确的手机号</p>
+				</div>
+				<div class="pass">
+					<label for="password">用户密码:</label>
+				    <input type="password" name="password" id="password" placeholder="请输入密码" v-on:blur="pwd"/>
+				    <p class="pwd">密码由大写字母+小写字母+数字，8-16位组成</p>
+				</div>
+				<!--<div class="judge clearfix">
+					<label for="userflag" id="flag">注册身份:</label>
+					<div>
+						<input type="radio" name="rad" id="adm" checked/>
+						<label for="adm" id="label1">管理员</label>
+					</div>
+				    <div>
+				    	<input type="radio" name="rad" id="user"/>
+				    	<label for="user" id="label2">普通用户</label>
+				    </div>
+				</div>-->
+			</form>
+		</section>
+		<footer>
+			<div>
+				<input type="checkbox" id="check" />
+				<span>同意本软件的使用协议</span>
+			</div>
+			<input type="button" value="注册" id="reg"/>
+		</footer>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/register.js"></script>
+	</body>
+</html>
