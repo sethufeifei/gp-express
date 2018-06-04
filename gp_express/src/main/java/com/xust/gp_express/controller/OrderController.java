@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -90,25 +89,47 @@ public class OrderController {
     }
 
     //根据登陆的用户名查询用户的所有订单
-    @RequestMapping("/findOrderList")
+    @RequestMapping("/findOrderList/yi")
     public Result findOrderList(Integer id){
 
-        log.info("根据登陆的用户名查询用户的所有订单！");
+        log.info("根据登陆的用户名查询用户的所有已评价订单！");
 
         Optional<Users> optional = usersRepository.findById(id);
         if(optional.isPresent() && optional.get().getFlag() == 1){
             List<Orders> list = orderRepository.findAll();
             List<Orders> returnList = new ArrayList<>();
             for (Orders order:list) {
-                if (order != null && id.equals(order.getUserId())){
+                if (order != null && id.equals(order.getUserId()) && order.getEvaluate() != null){
                     returnList.add(order);
                 }
             }
+
             System.out.println(returnList);
             return ReturnHandle.returnData(1,"成功！",returnList);
         }
         return ReturnHandle.returnData(2,"您不是普通用户！");
     }
+
+    @RequestMapping("/findOrderList/wei")
+    public Result findOrderList2(Integer id){
+
+        log.info("根据登陆的用户名查询用户的所有未评价订单！");
+
+        Optional<Users> optional = usersRepository.findById(id);
+        if(optional.isPresent() && optional.get().getFlag() == 1){
+            List<Orders> list = orderRepository.findAll();
+            List<Orders> returnList = new ArrayList<>();
+            for (Orders order:list) {
+                if (order != null && id.equals(order.getUserId()) &&  order.getEvaluate() == null){
+                    returnList.add(order);
+                }
+            }
+            return ReturnHandle.returnData(1,"成功！",returnList);
+        }
+        return ReturnHandle.returnData(2,"您不是普通用户！");
+    }
+
+
 
     //根据订单id确认收货
     @RequestMapping("/confirm")
@@ -125,7 +146,10 @@ public class OrderController {
             Optional<Orders> optionalOrder = orderRepository.findById(orderId);
             if (optionalOrder.isPresent()){
                 Orders orders = optionalOrder.get();
-                orders.setBool(true);
+                if (orders.getBool()){
+                    return ReturnHandle.returnData(5,"此订单已收货！");
+                }
+                orderRepository.setBooleanFor(true,orderId);
                 return ReturnHandle.returnData(1,"确认收货成功！");
             }
             return ReturnHandle.returnData(4,"此订单不存在！");
@@ -157,7 +181,12 @@ public class OrderController {
             Optional<Orders> optionalOrder = orderRepository.findById(orderId);
             if (optionalOrder.isPresent()){
                 Orders orders = optionalOrder.get();
-                orders.setEvaluate(evaluate);
+                if (orders.getEvaluate() != null){
+                    return ReturnHandle.returnData(7,"此订单已评价！");
+                }
+                orderRepository.setEvaluateFor(evaluate,orderId);
+                System.out.println(evaluate);
+                System.out.println(orderId);
                 return ReturnHandle.returnData(1,"确认收货成功！");
             }
             return ReturnHandle.returnData(4,"此订单不存在！");

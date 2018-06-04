@@ -24,6 +24,10 @@ $("#myword").mousedown(function (){
 	window.location.href= "My-Pwd.html";
 })
 
+$("#btn2").mousedown(function (){
+	window.location.href= "My-form1.html";
+})
+
 
 
 //所有订单ajax
@@ -31,7 +35,7 @@ var str1 = "";
 $(document).ready(function (){
 	$.ajax({
 		type:"get",
-		url:"http://180.76.244.76:8000/findOrderList",
+		url:"http://180.76.244.76:8000/findOrderList/wei",
 		async:true,
 		data:{
 			"id":$.cookie("userId")
@@ -59,7 +63,7 @@ $(".dingdan").delegate("#goods","mousedown",function(){
 		success:function (data){
 			 console.log(Index);
 				if(data.code==1){
-					alert("收获成功");
+					alert("收货成功");
 				}else if(data.code==3){
 					alert("订单号不能为空");
 				}else if(data.code==4){
@@ -83,10 +87,11 @@ $(".dingdan").delegate(".star img","mousedown",function (){
 		type:"get",
 		url:"http://180.76.244.76:8000/evaluate",
 		async:true,
-		data:{"orderId":a,"evaluate":b},
+		data:{"orderId":a,
+					"evaluate":b},
 		success:function (Data1){
 			if(Data1.code==1){
-				alert("成功");
+				alert("评价成功");
 			}else if(Data1.code==4){
 				alert("此订单不存在");
 			}else if(Data1.code==5){

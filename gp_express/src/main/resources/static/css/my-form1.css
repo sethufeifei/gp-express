@@ -65,14 +65,14 @@ header .nav .nav-ul
 }
 header .nav .nav-ul li
 {
-	width: 320px;
+	width: 200px;
 	height: 60px;
 	line-height: 60px;
 	text-align: center;
 	font-size: 22px;
 	float: left;
 }
-header .nav .nav-ul li:nth-child(2)
+header .nav .nav-ul li:nth-child(5)
 {
 	background-color: #1b77b6;
 }
@@ -86,67 +86,102 @@ header .nav .nav-ul li a
 }
 
 
-
 section
 {
 	width: 100%;
-	height: 1100px;
-	background-color: #e4e5ec;
-	padding-top: 30px;
-}
-section .section
-{
-	width: 1000px;
 	height: 1060px;
-	overflow-y:auto;
-	overflow-x:hidden;
+	background-color: #e4e5ec;
+}
+section .box
+{
+	width: 1280px;
+	height: 1000px;
+	background: #E4E5EC;
 	margin: 0 auto;
-	background-color: #FFFFFF;
+	padding-top: 80px;
 }
-section .section .head
+section .left
 {
-	width: 1000px;
-	height: 80px;
-	background-color: #FFFFFF;
-	position: relative;
+	width: 320px;
+	height: 460px;
+	padding-top: 160px;
+	background: no-repeat url(../img/nav-bg.png);
+	float: left;
+	margin-right: 30px;
 }
-section .section .head .border
+section .left ul
 {
-	width: 1000px;
-	height: 4px;
-	background-color: #9ab7f9;
-	position: absolute;
-	top: 35px;
+	width: 200px;
+	height: 110px;
+	padding-left: 60px;
 }
-section .section .head .form
+section .left ul li
 {
 	width: 200px;
 	height: 50px;
-	background-color: #2866f2;
-	border: 1px #7dc1f5 solid;
-	border-radius: 3%;
 	line-height: 50px;
 	text-align: center;
-	color: #FFFFFF;
-	font-size: 24px;
-	position: absolute;
-	top: 15px;
-	left: 400px;
+	font-size: 20px;
+	
 }
-section .section .content
+section .left ul li img
 {
-	width: 1000px;
-	height: 700px;
+	width: 12px;
+	height: 12px;
+	margin-right: 10px;
+}
+section .left ul li:nth-child(2) a
+{
+	color: #4c90f4;
+}
+section .left ul li:nth-child(1) a
+{
+	color: #9a9ea3;
+}
+section .right
+{
+	width: 920px;
+	height: 800px;
+	background-color: #E4E5EC;
+	float: left;
+}
+section .right .head
+{
+	width: 920px;
+	height: 50px;
+	margin-bottom: 20px;
 	background-color: #FFFFFF;
 }
-section .content .dingdan
+section .right .head input
 {
-	width: 1000px;
+	width: 200px;
+	height: 50px;
+	border: none;
+	background-color: #FFFFFF;
+	font-size: 20px;
+	color: #9a9ea3;
+}
+section .right .head #btn2
+{
+	color: #4c90f4;
+}
+section .right .content
+{
+	width: 920px;
+	height: 800px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	background-color: #FFFFFF;
+}
+/*section .content .dingdan
+{
+	width: 920px;
+	height: 800px;
 } 
 section .content .dingdan li
 {
-	width: 1000px;
-	/*height: 300px;*/
+	width: 920px;
+	height: 190px;
 	padding-top: 40px;
 	padding-left: 60px;
 	position: relative;
@@ -177,6 +212,111 @@ section .dingdan li .div1 #ads
 section .dingdan .div2
 {
 	width: 300px;
+	height: 130px;
+	position: absolute;
+	top: 50px;
+	right: 40px;
+	
+}
+section .dingdan .div2 .a
+{
+	width: 300px;
+}
+section .dingdan .div2 .a input
+{
+	float: left;
+	margin-right: 50px;
+}
+section .dingdan .div2 .a p
+{	
+	width: 60px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+	color: #000000;
+	float: left;
+}
+section .dingdan .div2 input
+{
+	width: 100px;
+	height: 40px;
+	margin-bottom: 35px;
+	background-color: #f99615;
+	font-size: 20px;
+	color: #FFFFFF;
+	border: none;
+}
+section .dingdan .div2 .aps
+{
+	width: 300px;
+	height: 45px;
+	position: relative;
+}
+section .dingdan .div2 .aps span
+{
+	color: #757171;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 24px;
+	position: absolute;
+	left: 0;
+}
+section .dingdan .div2 .aps .star
+{
+	width: 200px;
+	height: 45px;
+	position: absolute;
+	right: 0;
+}
+section .dingdan .star img
+{
+	width: 24px;
+	height: 24px;
+}*/
+
+
+
+section .content .dingdan
+{
+	width: 920px;
+} 
+section .content .dingdan li
+{
+	width: 920px;
+	/*height: 300px;*/
+	padding-top: 40px;
+	padding-left: 60px;
+	position: relative;
+	border-bottom: 2px #f0f1f5 solid;
+}
+section .dingdan li .div1
+{
+	width: 360px;
+	height: 130px;
+}
+section .dingdan li .div1 p
+{
+	width: 360px;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+}
+section .dingdan li .div1 #id,#tim
+{
+	font-size: 20px;
+	color: #9a9ea3;
+}
+section .dingdan li .div1 #ads
+{
+	font-size: 24px;
+	color: #000000;
+}
+section .dingdan .div2
+{
+	width: 260px;
 	height: 130px;
 	position: absolute;
 	top: 50px;
@@ -245,13 +385,13 @@ section .dingdan  .div3
 }
 section .dingdan .div3 .l-text
 {
-	width: 400px;
+	width: 360px;
 	height: 300px;
 	float: left;
 }
 section .dingdan .div3 .r-text
 {
-	width: 460px;
+	width: 400px;
 	height: 300px;
 	float: left;
 }
@@ -263,7 +403,7 @@ section .dingdan .div3 label
 }
 section .dingdan .div3 .l-text div
 {
-	width: 400px;
+	width: 360px;
 	height: 45px;
 	margin-bottom: 20px;
 	line-height: 40px;
@@ -272,14 +412,14 @@ section .dingdan .div3 .l-text div
 }
 section .dingdan .div3 .l-text input
 {
-	width:300px;
+	width:260px;
 	height: 40px;
 	border: 1px #CDCDCC solid;
 	border-radius: 2%;
 }
 section .dingdan .div3 .r-text div
 {
-	width: 460px;
+	width: 400px;
 	height: 45px;
 	margin-bottom: 20px;
 	line-height: 40px;
@@ -288,11 +428,12 @@ section .dingdan .div3 .r-text div
 }
 section .dingdan .div3 .r-text input
 {
-	width:300px;
+	width:260px;
 	height: 40px;
 	border: 1px #CDCDCC solid;
 	border-radius: 2%;
 }
+
 
 
 footer
@@ -345,4 +486,4 @@ footer .footer .server p
 	color: #534F4F;
 	margin-bottom: 30px;
 		
-}	
+}
